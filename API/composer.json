@@ -1,0 +1,16 @@
+{
+    "name": "mateocarvajal/api",
+    "description": "Enpoint for app SGA",
+    "autoload": {
+        "psr-4": {
+            "Mateocarvajal\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mateo Cardenas",
+            "email": "mateo.cardenas.pedraza@gmail.com"
+        }
+    ],
+    "require": {}
+}
