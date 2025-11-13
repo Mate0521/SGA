@@ -73,6 +73,7 @@ CREATE TABLE Alumno(
     Foto VARCHAR(100),
     PRIMARY KEY(Id_Alumno)
 );
+
 CREATE TABLE Alumno_Asignatura(
     Id_Alumno INT NOT NULL,
     Id_Asignatura INT NOT NULL,
