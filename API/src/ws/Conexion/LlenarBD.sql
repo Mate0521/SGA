@@ -1,93 +1,101 @@
 USE UniLocos;
 
--- ============================
--- 🔹 DEPARTAMENTOS
--- ============================
+-- ========================
+-- DEPARTAMENTOS
+-- ========================
 INSERT INTO Departamento (Nombre_Departamento) VALUES
 ('Ciencias Básicas'),
-('Ingeniería y Tecnología'),
-('Ciencias Sociales'),
-('Ciencias Económicas y Administrativas');
+('Ingeniería'),
+('Humanidades'),
+('Administración');
 
--- ============================
--- 🔹 CARRERAS
--- ============================
+-- ========================
+-- CARRERAS
+-- ========================
 INSERT INTO Carrera (Nombre_Carrera) VALUES
 ('Ingeniería de Sistemas'),
-('Ingeniería Industrial'),
+('Ingeniería Electrónica'),
 ('Administración de Empresas'),
-('Psicología');
+('Licenciatura en Matemáticas');
 
--- ============================
--- 🔹 ÁREAS DE CONOCIMIENTO
--- ============================
+-- ========================
+-- ÁREAS DE CONOCIMIENTO
+-- ========================
 INSERT INTO Area_Con (Id_Departamento, Nombre_Area) VALUES
 (1, 'Matemáticas'),
 (1, 'Física'),
-(2, 'Programación'),
-(2, 'Producción y Operaciones'),
-(3, 'Psicología Organizacional'),
-(4, 'Finanzas y Contabilidad');
+(2, 'Programación y Software'),
+(2, 'Electrónica y Telecomunicaciones'),
+(3, 'Comunicación y Ética'),
+(4, 'Gestión y Finanzas');
 
--- ============================
--- 🔹 DURACIONES
--- ============================
+-- ========================
+-- DURACIÓN
+-- ========================
 INSERT INTO Duracion (Nombre_Duracion) VALUES
 ('Semestral'),
+('Trimestral'),
 ('Anual');
 
--- ============================
--- 🔹 ASIGNATURAS
--- ============================
+-- ========================
+-- ASIGNATURAS
+-- ========================
 INSERT INTO Asignatura (Id_Carrera, Nombre_Asignatura, Id_Duracion, Creditos_Teoria, Creditos_Laboratorio) VALUES
-(1, 'Programación I', 1, 3, 2),
+(1, 'Programación I', 1, 3, 1),
 (1, 'Bases de Datos', 1, 3, 2),
-(2, 'Gestión de la Producción', 1, 3, 1),
-(2, 'Investigación de Operaciones', 1, 4, 0),
-(3, 'Contabilidad Financiera', 1, 3, 1),
-(3, 'Administración General', 1, 4, 0),
-(4, 'Psicología del Trabajo', 1, 3, 1),
-(4, 'Neuropsicología', 1, 4, 0);
+(1, 'Sistemas Operativos', 1, 3, 2),
+(2, 'Electrónica Digital', 1, 3, 2),
+(2, 'Circuitos Eléctricos', 1, 3, 1),
+(3, 'Administración Financiera', 1, 3, 0),
+(3, 'Contabilidad General', 1, 3, 0),
+(4, 'Cálculo Diferencial', 1, 3, 1),
+(4, 'Álgebra Lineal', 1, 3, 1);
 
--- ============================
--- 🔹 PROFESORES (claves en MD5)
--- ============================
-INSERT INTO Profesor (Id_AreaCon, Nombre_Profesor, Correo, Clave, Tel) VALUES
-(3, 'Carlos Pérez', 'cperez@uniloc.edu.co', MD5('1234'), '3001234567'),
-(3, 'Laura Torres', 'ltorres@uniloc.edu.co', MD5('1234'), '3009876543'),
-(4, 'Andrés Gómez', 'agomez@uniloc.edu.co', MD5('1234'), '3101239876'),
-(6, 'María Sánchez', 'msanchez@uniloc.edu.co', MD5('1234'), '3201234567'),
-(5, 'Jorge Ramírez', 'jramirez@uniloc.edu.co', MD5('1234'), '3151234567'),
-(1, 'Diana López', 'dlopez@uniloc.edu.co', MD5('1234'), '3186543210');
+-- ========================
+-- PROFESORES (Contraseñas MD5)
+-- ========================
+-- Las contraseñas en texto plano son: 1234, 5678, 4321, etc.
+INSERT INTO Profesor (Id_AreaCon, Nombre_Profesor, Correo, Clave, Foto, Tel) VALUES
+(3, 'Carlos Ramírez', 'carlos.ramirez@unilocos.edu', MD5('1234'), 'foto1.jpg', '3104567890'),
+(3, 'María López', 'maria.lopez@unilocos.edu', MD5('5678'), 'foto2.jpg', '3001234567'),
+(4, 'Jorge Torres', 'jorge.torres@unilocos.edu', MD5('9876'), 'foto3.jpg', '3207896541'),
+(6, 'Ana Martínez', 'ana.martinez@unilocos.edu', MD5('admin1'), 'foto4.jpg', '3136549872'),
+(1, 'Sofía Hernández', 'sofia.hernandez@unilocos.edu', MD5('math1'), 'foto5.jpg', '3012223344');
 
--- ============================
--- 🔹 ASIGNATURA_PROFESOR
--- ============================
+-- ========================
+-- ASIGNATURA - PROFESOR
+-- ========================
 INSERT INTO Asignatura_Profesor (Id_Asignatura, Id_Profesor) VALUES
-(1, 1),  -- Programación I - Carlos Pérez
-(2, 2),  -- Bases de Datos - Laura Torres
-(3, 3),  -- Gestión de la Producción - Andrés Gómez
-(5, 4),  -- Contabilidad Financiera - María Sánchez
-(7, 5),  -- Psicología del Trabajo - Jorge Ramírez
-(8, 5);  -- Neuropsicología - Jorge Ramírez
+(1, 1),
+(2, 2),
+(3, 1),
+(4, 3),
+(5, 3),
+(6, 4),
+(7, 4),
+(8, 5),
+(9, 5);
 
--- ============================
--- 🔹 ALUMNOS (claves en MD5)
--- ============================
-INSERT INTO Alumno (Nombre_Alumno, Correo, Clave) VALUES
-('Juan Martínez', 'juanmartinez@correo.com', MD5('1234')),
-('Ana Rodríguez', 'anarodriguez@correo.com', MD5('1234')),
-('Luis Gómez', 'luisgomez@correo.com', MD5('1234')),
-('Sofía Torres', 'sofiatorres@correo.com', MD5('1234')),
-('Pedro Sánchez', 'pedrosanchez@correo.com', MD5('1234'));
+-- ========================
+-- ALUMNOS (Contraseñas MD5)
+-- ========================
+INSERT INTO Alumno (Nombre_Alumno, Correo, Clave, Foto) VALUES
+('Juan Pérez', 'juan.perez@unilocos.edu', MD5('alumno1'), 'alum1.jpg'),
+('Laura Gómez', 'laura.gomez@unilocos.edu', MD5('alumno2'), 'alum2.jpg'),
+('Andrés Díaz', 'andres.diaz@unilocos.edu', MD5('alumno3'), 'alum3.jpg'),
+('Camila Suárez', 'camila.suarez@unilocos.edu', MD5('alumno4'), 'alum4.jpg'),
+('Mateo Rojas', 'mateo.rojas@unilocos.edu', MD5('alumno5'), 'alum5.jpg');
 
--- ============================
--- 🔹 ALUMNO_ASIGNATURA
--- ============================
-INSERT INTO Alumno_Asignatura (Id_Alumno, Id_Asignatura) VALUES
-(1, 1),  -- Juan - Programación I
-(1, 2),  -- Juan - Bases de Datos
-(2, 3),  -- Ana - Gestión de la Producción
-(3, 5),  -- Luis - Contabilidad Financiera
-(4, 7),  -- Sofía - Psicología del Trabajo
-(5, 8);  -- Pedro - Neuropsicología
+-- ========================
+-- ALUMNO - ASIGNATURA (HORARIO)
+-- ========================
+INSERT INTO Alumno_Asignatura (Id_Alumno, Id_Asignatura, Dia_Semana, Hora_Inicio, Hora_Fin, Aula) VALUES
+(1, 1, 'Lunes', '08:00:00', '10:00:00', 'A101'),
+(1, 2, 'Martes', '10:00:00', '12:00:00', 'A102'),
+(2, 3, 'Miércoles', '08:00:00', '10:00:00', 'B201'),
+(2, 4, 'Jueves', '14:00:00', '16:00:00', 'B202'),
+(3, 5, 'Viernes', '09:00:00', '11:00:00', 'C101'),
+(3, 6, 'Lunes', '07:00:00', '09:00:00', 'C102'),
+(4, 7, 'Martes', '09:00:00', '11:00:00', 'D103'),
+(4, 8, 'Miércoles', '13:00:00', '15:00:00', 'D104'),
+(5, 9, 'Jueves', '07:00:00', '09:00:00', 'E105');
