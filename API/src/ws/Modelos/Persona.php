@@ -12,9 +12,6 @@
             $this->clave = $clave;
             $this->foto = $foto;
         }
-
-        
-
         /**
          * Get the value of nombre
          */ 
