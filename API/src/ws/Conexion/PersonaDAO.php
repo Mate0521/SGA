@@ -1,10 +1,12 @@
 <?php
     class PersonaDAO{
+        
         protected $nombre;
         protected $id;
         protected $correo;
         protected $clave;
         protected $foto;
+
         public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = ""){
             $this->nombre = $nombre;
             $this->id = $id;

@@ -74,10 +74,17 @@ CREATE TABLE Alumno(
     PRIMARY KEY(Id_Alumno)
 );
 CREATE TABLE Alumno_Asignatura(
-    Id_Alumno int not null,
-    Id_Asignatura int not null,
-    foreign key(Id_Alumno)
-    REFERENCES Alumno(Id_Alumno) ON DELETE CASCADE,
-    foreign key(Id_Asignatura)
-        REFERENCES Asignatura(Id_Asignatura) ON DELETE CASCADE
+    Id_Alumno INT NOT NULL,
+    Id_Asignatura INT NOT NULL,
+    Dia_Semana ENUM('Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'),
+    Hora_Inicio TIME NOT NULL,
+    Hora_Fin TIME NOT NULL,
+    Aula VARCHAR(50),
+    PRIMARY KEY(Id_Alumno, Id_Asignatura, Dia_Semana),
+    FOREIGN KEY(Id_Alumno)
+        REFERENCES Alumno(Id_Alumno)
+        ON DELETE CASCADE,
+    FOREIGN KEY(Id_Asignatura)
+        REFERENCES Asignatura(Id_Asignatura)
+        ON DELETE CASCADE
 );
