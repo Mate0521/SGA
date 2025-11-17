@@ -14,8 +14,6 @@
 
     require_once '../Conexion/Conexion.php';
     require_once '../Conexion/ProfesorDAO.php';
-    require_once '../Modelos/Persona.php';
-    require_once '../Modelos/AreaCon.php';  
     class Profesor extends Persona {
 
         private $id_AreaCon;
