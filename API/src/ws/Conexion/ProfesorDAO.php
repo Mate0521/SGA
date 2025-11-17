@@ -62,7 +62,22 @@ class ProfesorDAO extends PersonaDAO
 
     public function listarProfesores() {
 
-        return "";
+        return "SELECT 
+                p.Nombre_Profesor AS nombre,
+                p.Correo AS correo,
+                p.Tel AS telefono,
+                a.Nombre_Area AS area,
+                d.Nombre_Departamento AS departamento,
+                (
+                    SELECT JSON_ARRAYAGG(asig.Nombre_Asignatura)
+                    FROM curso_profesor cp
+                    INNER JOIN curso c ON cp.id_curso = c.id_curso
+                    INNER JOIN asignatura asig ON c.id_asignatura = asig.Id_Asignatura
+                    WHERE cp.Id_Profesor = p.Id_Profesor
+                ) AS cursos
+            FROM profesor p
+            INNER JOIN area_con a ON p.Id_AreaCon = a.Id_Area
+            INNER JOIN departamento d ON a.Id_Departamento = d.Id_Departamento;";
 
     }
 }

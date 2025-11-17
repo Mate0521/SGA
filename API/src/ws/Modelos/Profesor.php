@@ -81,11 +81,16 @@
             $profesorDAO = new ProfesorDAO();
             $conexion->abrir();
             $conexion->ejecutar($profesorDAO->listarProfesores());
-            $resultado = array();
+            $lista = [];
             while(($fila = $conexion->registro()) != null){
-
-                
-
+                $lista[] = [
+                "nombre"      => $fila[0],
+                "correo"      => $fila[1],
+                "telefono"    => $fila[2],
+                "area"        => $fila[3],
+                "departamento"=> $fila[4],
+                "cursos"      => json_decode($fila[5])
+                ];
             }
         }
     }
