@@ -92,6 +92,7 @@
                 "cursos"      => json_decode($fila[5])
                 ];
             }
+            return json_encode($lista);
         }
     }
 ?>
