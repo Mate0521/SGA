@@ -2,39 +2,67 @@
 class ProfesorDAO extends PersonaDAO
 {
 
-    public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "", $legajo = "", $materia = "")
+    private $id_AreaCon;
+    private $telefono;
+
+    public function __construct($nombre_Profesor="", $id="", $correo="", $clave="", $foto="", $id_AreaCon = "", $telefono = "")
     {
-        parent::__construct($nombre, $id, $correo, $clave, $foto);
+        parent::__construct(
+            $nombre_Profesor,
+            $id,
+            $correo,
+            $clave,
+            $foto
+        );
+        $this->id_AreaCon = $id_AreaCon;
+        $this->telefono = $telefono;
     }
 
-    public function ListaProfesores()
+
+
+    /**
+     * Get the value of id_AreaCon
+     */
+    public function getId_AreaCon()
     {
-        return "SELECT 
-                p.Nombre_Profesor, 
-                p.Correo, 
-                a.Nombre_Area, 
-                d.Nombre_Departamento
-                FROM Profesor p
-                INNER JOIN Area_Con a 
-                    ON p.Id_AreaCon = a.Id_Area
-                INNER JOIN Departamento d 
-                    ON a.Id_Departamento = d.Id_Departamento
-                WHERE p.Id_Profesor = ".$this->getId().";
-                ";
+        return $this->id_AreaCon;
     }
 
-    public function ListaMaterias()
+    /**
+     * Set the value of id_AreaCon
+     *
+     * @return  self
+     */
+    public function setId_AreaCon($id_AreaCon)
     {
-        return "
-        SELECT
-            a.Nombre_Asignatura,
-            p.Nombre_Profesor
-            FROM
-            Profesor p 
-            INNER JOIN 
-            Asignatura_Profesor ap on p.Id_Profesor = ap.Id_Profesor
-            INNER JOIN
-            Asignatura a on ap.Id_Asignatura = a.Id_Asignatura
-            WHERE p.Id_Profesor = ".$this->getId();
+        $this->id_AreaCon = $id_AreaCon;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of telefono
+     */
+    public function getTelefono()
+    {
+        return $this->telefono;
+    }
+
+    /**
+     * Set the value of telefono
+     *
+     * @return  self
+     */
+    public function setTelefono($telefono)
+    {
+        $this->telefono = $telefono;
+
+        return $this;
+    }
+
+    public function listarProfesores() {
+
+        return "";
+
     }
 }

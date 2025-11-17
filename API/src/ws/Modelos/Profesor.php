@@ -21,7 +21,7 @@
         private $id_AreaCon;
         private $telefono;
 
-        public function __construct($nombre_Profesor, $id, $correo, $clave, $foto, $id_AreaCon = "", $telefono = "")
+        public function __construct($nombre_Profesor="", $id="", $correo="", $clave="", $foto="", $id_AreaCon = "", $telefono = "")
         {
             parent::__construct(
                 $nombre_Profesor,
@@ -77,7 +77,16 @@
         }
 
         public function listarProfesores(){
-            
+            $conexion = new Conexion();
+            $profesorDAO = new ProfesorDAO();
+            $conexion->abrir();
+            $conexion->ejecutar($profesorDAO->listarProfesores());
+            $resultado = array();
+            while(($fila = $conexion->registro()) != null){
+
+                
+
+            }
         }
     }
 ?>
