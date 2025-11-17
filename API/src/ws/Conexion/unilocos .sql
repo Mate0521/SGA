@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2025 a las 22:26:20
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: localhost
+-- Generation Time: Nov 17, 2025 at 09:48 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `unilocos`
+-- Database: `UniLocos`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumno`
+-- Table structure for table `alumno`
 --
 
 CREATE TABLE `alumno` (
@@ -37,7 +37,7 @@ CREATE TABLE `alumno` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumno_horario`
+-- Table structure for table `alumno_horario`
 --
 
 CREATE TABLE `alumno_horario` (
@@ -48,7 +48,7 @@ CREATE TABLE `alumno_horario` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `area_con`
+-- Table structure for table `area_con`
 --
 
 CREATE TABLE `area_con` (
@@ -60,7 +60,7 @@ CREATE TABLE `area_con` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `asignatura`
+-- Table structure for table `asignatura`
 --
 
 CREATE TABLE `asignatura` (
@@ -75,7 +75,7 @@ CREATE TABLE `asignatura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `carrera`
+-- Table structure for table `carrera`
 --
 
 CREATE TABLE `carrera` (
@@ -86,7 +86,7 @@ CREATE TABLE `carrera` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `curso`
+-- Table structure for table `curso`
 --
 
 CREATE TABLE `curso` (
@@ -104,7 +104,7 @@ CREATE TABLE `curso` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `curso_profesor`
+-- Table structure for table `curso_profesor`
 --
 
 CREATE TABLE `curso_profesor` (
@@ -115,7 +115,7 @@ CREATE TABLE `curso_profesor` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `departamento`
+-- Table structure for table `departamento`
 --
 
 CREATE TABLE `departamento` (
@@ -126,7 +126,7 @@ CREATE TABLE `departamento` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `profesor`
+-- Table structure for table `profesor`
 --
 
 CREATE TABLE `profesor` (
@@ -139,65 +139,65 @@ CREATE TABLE `profesor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `alumno`
+-- Indexes for table `alumno`
 --
 ALTER TABLE `alumno`
   ADD PRIMARY KEY (`Id_Alumno`),
   ADD UNIQUE KEY `Correo` (`Correo`);
 
 --
--- Indices de la tabla `alumno_horario`
+-- Indexes for table `alumno_horario`
 --
 ALTER TABLE `alumno_horario`
   ADD PRIMARY KEY (`Id_Alumno`,`id_curso`),
   ADD KEY `id_curso` (`id_curso`);
 
 --
--- Indices de la tabla `area_con`
+-- Indexes for table `area_con`
 --
 ALTER TABLE `area_con`
   ADD PRIMARY KEY (`Id_Area`),
   ADD KEY `Id_Departamento` (`Id_Departamento`);
 
 --
--- Indices de la tabla `asignatura`
+-- Indexes for table `asignatura`
 --
 ALTER TABLE `asignatura`
   ADD PRIMARY KEY (`Id_Asignatura`),
   ADD KEY `Id_Carrera` (`Id_Carrera`);
 
 --
--- Indices de la tabla `carrera`
+-- Indexes for table `carrera`
 --
 ALTER TABLE `carrera`
   ADD PRIMARY KEY (`Id_Carrera`);
 
 --
--- Indices de la tabla `curso`
+-- Indexes for table `curso`
 --
 ALTER TABLE `curso`
   ADD PRIMARY KEY (`id_curso`),
   ADD UNIQUE KEY `id_asignatura` (`id_asignatura`);
 
 --
--- Indices de la tabla `curso_profesor`
+-- Indexes for table `curso_profesor`
 --
 ALTER TABLE `curso_profesor`
   ADD PRIMARY KEY (`id_curso`,`Id_Profesor`),
   ADD KEY `Id_Profesor` (`Id_Profesor`);
 
 --
--- Indices de la tabla `departamento`
+-- Indexes for table `departamento`
 --
 ALTER TABLE `departamento`
   ADD PRIMARY KEY (`Id_Departamento`);
 
 --
--- Indices de la tabla `profesor`
+-- Indexes for table `profesor`
 --
 ALTER TABLE `profesor`
   ADD PRIMARY KEY (`Id_Profesor`),
@@ -205,89 +205,89 @@ ALTER TABLE `profesor`
   ADD KEY `Id_AreaCon` (`Id_AreaCon`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `alumno`
+-- AUTO_INCREMENT for table `alumno`
 --
 ALTER TABLE `alumno`
   MODIFY `Id_Alumno` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `area_con`
+-- AUTO_INCREMENT for table `area_con`
 --
 ALTER TABLE `area_con`
   MODIFY `Id_Area` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `asignatura`
+-- AUTO_INCREMENT for table `asignatura`
 --
 ALTER TABLE `asignatura`
   MODIFY `Id_Asignatura` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `carrera`
+-- AUTO_INCREMENT for table `carrera`
 --
 ALTER TABLE `carrera`
   MODIFY `Id_Carrera` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `curso`
+-- AUTO_INCREMENT for table `curso`
 --
 ALTER TABLE `curso`
   MODIFY `id_curso` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `departamento`
+-- AUTO_INCREMENT for table `departamento`
 --
 ALTER TABLE `departamento`
   MODIFY `Id_Departamento` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `profesor`
+-- AUTO_INCREMENT for table `profesor`
 --
 ALTER TABLE `profesor`
   MODIFY `Id_Profesor` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `alumno_horario`
+-- Constraints for table `alumno_horario`
 --
 ALTER TABLE `alumno_horario`
   ADD CONSTRAINT `alumno_horario_ibfk_1` FOREIGN KEY (`Id_Alumno`) REFERENCES `alumno` (`Id_Alumno`),
   ADD CONSTRAINT `alumno_horario_ibfk_2` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`);
 
 --
--- Filtros para la tabla `area_con`
+-- Constraints for table `area_con`
 --
 ALTER TABLE `area_con`
   ADD CONSTRAINT `area_con_ibfk_1` FOREIGN KEY (`Id_Departamento`) REFERENCES `departamento` (`Id_Departamento`) ON DELETE CASCADE;
 
 --
--- Filtros para la tabla `asignatura`
+-- Constraints for table `asignatura`
 --
 ALTER TABLE `asignatura`
   ADD CONSTRAINT `asignatura_ibfk_1` FOREIGN KEY (`Id_Carrera`) REFERENCES `carrera` (`Id_Carrera`) ON DELETE CASCADE;
 
 --
--- Filtros para la tabla `curso`
+-- Constraints for table `curso`
 --
 ALTER TABLE `curso`
   ADD CONSTRAINT `curso_ibfk_1` FOREIGN KEY (`id_asignatura`) REFERENCES `asignatura` (`Id_Asignatura`);
 
 --
--- Filtros para la tabla `curso_profesor`
+-- Constraints for table `curso_profesor`
 --
 ALTER TABLE `curso_profesor`
   ADD CONSTRAINT `curso_profesor_ibfk_2` FOREIGN KEY (`Id_Profesor`) REFERENCES `profesor` (`Id_Profesor`) ON DELETE CASCADE,
   ADD CONSTRAINT `curso_profesor_ibfk_3` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`);
 
 --
--- Filtros para la tabla `profesor`
+-- Constraints for table `profesor`
 --
 ALTER TABLE `profesor`
   ADD CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`Id_AreaCon`) REFERENCES `area_con` (`Id_Area`) ON DELETE CASCADE;
