@@ -7,18 +7,6 @@ class ProfesorDAO extends PersonaDAO
         parent::__construct($nombre, $id, $correo, $clave, $foto);
     }
 
-    /*
-        1. una clase exclusiva para conslta del listado de profesores (no le voy ha enviar nada ).
-
-        datos que me debe de dar (con el mismo nombre ):
-        nombre: nombre del profesor 
-        correo: correo del prof
-        telefono: telefono del pof
-        area: nombre del area del profesor
-        departamento: nombre del departamento del area 
-        cursos:{}->un listado con el nombre de los cursos que da sigue estando en formato json
-        */
-
     public function ListaProfesores()
     {
         return "SELECT 

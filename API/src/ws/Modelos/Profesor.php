@@ -1,95 +1,83 @@
 <?php
+
+    /*
+        1. una clase exclusiva para conslta del listado de profesores (no le voy ha enviar nada ).
+
+        datos que me debe de dar (con el mismo nombre ):
+        nombre: nombre del profesor 
+        correo: correo del prof
+        telefono: telefono del pof
+        area: nombre del area del profesor
+        departamento: nombre del departamento del area 
+        cursos:{}->un listado con el nombre de los cursos que da sigue estando en formato json
+        */
+
     require_once '../Conexion/Conexion.php';
     require_once '../Conexion/ProfesorDAO.php';
     require_once '../Modelos/Persona.php';
     require_once '../Modelos/AreaCon.php';  
     class Profesor extends Persona {
-        private $idArea;
-        private $Tel;
-        private $profesores = array();
 
-        public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "", $idArea = "", $Tel = ""  ){
-            parent::__construct($nombre, $id, $correo, $clave, $foto);
-            $this->idArea = $idArea;
-            $this->Tel = $Tel;
-        }
+        private $id_AreaCon;
+        private $telefono;
 
-        public function listadoProfesores(){
-            $conexion = new Conexion();
-            $profesorDAO = new ProfesorDAO();
-            
-            $conexion->abrir();
-            $conexion->ejecutar($profesorDAO->ListaProfesores());
-            
-            while(($datos = $conexion->registro())!=null){
-                $areaCon = new AreaCon("",$datos[3],$datos[2]);
-                $profe = new Profesor(
-                    $datos[0],
-                    $this->getId(),
-                    $datos[1],
-                    "",
-                    "",
-                    $areaCon,
-                    ""                    
-                );
-                array_push($profesores,$profe);
-            }
-
-            while(($datos = $conexion->registro())!=null){
-                $areaCon = new AreaCon("",$datos[3],$datos[2]);
-                $profe = new Profesor(
-                    $datos[0],
-                    $this->getId(),
-                    $datos[1],
-                    "",
-                    "",
-                    $areaCon,
-                    ""                    
-                );
-                array_push($profesores,$profe);
-            }
-
-            $conexion->cerrar();
-        }
-
-        /**
-         * Get the value of idArea
-         */ 
-        public function getIdArea()
+        public function __construct($nombre_Profesor, $id, $correo, $clave, $foto, $id_AreaCon = "", $telefono = "")
         {
-                return $this->idArea;
+            parent::__construct(
+                $nombre_Profesor,
+                $id,
+                $correo,
+                $clave,
+                $foto
+            );
+            $this->id_AreaCon = $id_AreaCon;
+            $this->telefono = $telefono;
+        }
+
+        
+
+        /**
+         * Get the value of id_AreaCon
+         */ 
+        public function getId_AreaCon()
+        {
+                return $this->id_AreaCon;
         }
 
         /**
-         * Set the value of idArea
+         * Set the value of id_AreaCon
          *
          * @return  self
          */ 
-        public function setIdArea($idArea)
+        public function setId_AreaCon($id_AreaCon)
         {
-                $this->idArea = $idArea;
+                $this->id_AreaCon = $id_AreaCon;
 
                 return $this;
         }
 
         /**
-         * Get the value of Tel
+         * Get the value of telefono
          */ 
-        public function getTel()
+        public function getTelefono()
         {
-                return $this->Tel;
+                return $this->telefono;
         }
 
         /**
-         * Set the value of Tel
+         * Set the value of telefono
          *
          * @return  self
          */ 
-        public function setTel($Tel)
+        public function setTelefono($telefono)
         {
-                $this->Tel = $Tel;
+                $this->telefono = $telefono;
 
                 return $this;
+        }
+
+        public function listarProfesores(){
+            
         }
     }
 ?>
