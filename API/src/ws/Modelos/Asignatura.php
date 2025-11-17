@@ -1,21 +1,30 @@
 <?php
-    class Asignatura{
+class Asignatura
+{
         private $id_Asignatura;
-        private $carrera;
-        private $nombre_Asignatura;
-        private $id_Duracion;
-        private $creditos_Teorticos;
-        private $creditos_Laboratoriales;
+        private $nombre;
+        private $id_Carrera;
+        private $duracion;
+        private $cre_Laboratorio;
+        private $cre_Teoria;
 
-        public function __construct($id_Asignatura = "", $carrera = "", $nombre_Asignatura = "", $id_Duracion = "", $creditos_Teorticos = "", $creditos_Laboratoriales = ""){
-            $this->id_Asignatura = $id_Asignatura;
-            $this->carrera = $carrera;
-            $this->nombre_Asignatura = $nombre_Asignatura;
-            $this->id_Duracion = $id_Duracion;
-            $this->creditos_Teorticos = $creditos_Teorticos;
-            $this->creditos_Laboratoriales = $creditos_Laboratoriales;
-
+        public function __construct(
+                $id_Asignatura = "",
+                $nombre = "",
+                $id_Carrera = "",
+                $duracion = "",
+                $cre_Laboratorio = "",
+                $cre_Teoria = ""
+        ) {
+                $this->id_Asignatura = $id_Asignatura;
+                $this->nombre = $nombre;
+                $this->id_Carrera = $id_Carrera;
+                $this->duracion = $duracion;
+                $this->cre_Laboratorio = $cre_Laboratorio;
+                $this->cre_Teoria = $cre_Teoria;
         }
+
+        
 
         /**
          * Get the value of id_Asignatura
@@ -38,103 +47,102 @@
         }
 
         /**
-         * Get the value of carrera
+         * Get the value of nombre
          */ 
-        public function getCarrera()
+        public function getNombre()
         {
-                return $this->carrera;
+                return $this->nombre;
         }
 
         /**
-         * Set the value of carrera
+         * Set the value of nombre
          *
          * @return  self
          */ 
-        public function setCarrera($carrera)
+        public function setNombre($nombre)
         {
-                $this->carrera = $carrera;
+                $this->nombre = $nombre;
 
                 return $this;
         }
 
         /**
-         * Get the value of nombre_Asignatura
+         * Get the value of id_Carrera
          */ 
-        public function getNombre_Asignatura()
+        public function getId_Carrera()
         {
-                return $this->nombre_Asignatura;
+                return $this->id_Carrera;
         }
 
         /**
-         * Set the value of nombre_Asignatura
+         * Set the value of id_Carrera
          *
          * @return  self
          */ 
-        public function setNombre_Asignatura($nombre_Asignatura)
+        public function setId_Carrera($id_Carrera)
         {
-                $this->nombre_Asignatura = $nombre_Asignatura;
+                $this->id_Carrera = $id_Carrera;
 
                 return $this;
         }
 
         /**
-         * Get the value of id_Duracion
+         * Get the value of duracion
          */ 
-        public function getId_Duracion()
+        public function getDuracion()
         {
-                return $this->id_Duracion;
+                return $this->duracion;
         }
 
         /**
-         * Set the value of id_Duracion
+         * Set the value of duracion
          *
          * @return  self
          */ 
-        public function setId_Duracion($id_Duracion)
+        public function setDuracion($duracion)
         {
-                $this->id_Duracion = $id_Duracion;
+                $this->duracion = $duracion;
 
                 return $this;
         }
 
         /**
-         * Get the value of creditos_Teorticos
+         * Get the value of cre_Laboratorio
          */ 
-        public function getCreditos_Teorticos()
+        public function getCre_Laboratorio()
         {
-                return $this->creditos_Teorticos;
+                return $this->cre_Laboratorio;
         }
 
         /**
-         * Set the value of creditos_Teorticos
+         * Set the value of cre_Laboratorio
          *
          * @return  self
          */ 
-        public function setCreditos_Teorticos($creditos_Teorticos)
+        public function setCre_Laboratorio($cre_Laboratorio)
         {
-                $this->creditos_Teorticos = $creditos_Teorticos;
+                $this->cre_Laboratorio = $cre_Laboratorio;
 
                 return $this;
         }
 
         /**
-         * Get the value of creditos_Laboratoriales
+         * Get the value of cre_Teoria
          */ 
-        public function getCreditos_Laboratoriales()
+        public function getCre_Teoria()
         {
-                return $this->creditos_Laboratoriales;
+                return $this->cre_Teoria;
         }
 
         /**
-         * Set the value of creditos_Laboratoriales
+         * Set the value of cre_Teoria
          *
          * @return  self
          */ 
-        public function setCreditos_Laboratoriales($creditos_Laboratoriales)
+        public function setCre_Teoria($cre_Teoria)
         {
-                $this->creditos_Laboratoriales = $creditos_Laboratoriales;
+                $this->cre_Teoria = $cre_Teoria;
 
                 return $this;
         }
-    }
-?>
+}
