@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Ícono genérico de asignatura -->
+        <ImageView
+            android:id="@+id/imgAsignatura"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_book_placeholder"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/circle_bg"
+            android:padding="12dp" />
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/txtNombreAsig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la Asignatura"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Carrera -->
+        <TextView
+            android:id="@+id/txtCarrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrera"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Duración -->
+        <TextView
+            android:id="@+id/txtDuracion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Duración:"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Créditos teóricos -->
+        <TextView
+            android:id="@+id/txtCreditosTeoricos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créditos teóricos:"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Créditos laboratorio -->
+        <TextView
+            android:id="@+id/txtCreditosLab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créditos laboratorio:"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Cursos -->
+        <TextView
+            android:id="@+id/txtCursosTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cursos asociados (IDs):"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/txtCursos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 101"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,16 +1,15 @@
 package com.componetes.appandroid.ui.asignaturas
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.componetes.appandroidsga.R
+import com.componetes.appandroid.data.modelo.respuesta.asignaturas.Asignatura
 import com.componetes.appandroidsga.databinding.ActivityAsignaturasBinding
+import com.componetes.appandroidsga.ui.asignaturas.detalle.AsignaturaDetalle
 
 
 class Asignaturas : AppCompatActivity() {
@@ -24,7 +23,11 @@ class Asignaturas : AppCompatActivity() {
         binding = ActivityAsignaturasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = AsignaturasAdapter()
+        // Crear adapter con callback
+        adapter = AsignaturasAdapter { asignatura ->
+            abrirDetalle(asignatura)
+        }
+
         binding.recyclerAsignaturas.adapter = adapter
         binding.recyclerAsignaturas.layoutManager = LinearLayoutManager(this)
 
@@ -43,5 +46,11 @@ class Asignaturas : AppCompatActivity() {
 
         // Cargar data
         viewModel.cargarAsignaturas()
+    }
+
+    private fun abrirDetalle(asignatura: Asignatura) {
+        val intent = Intent(this, AsignaturaDetalle::class.java)
+        intent.putExtra("asignatura", asignatura)
+        startActivity(intent)
     }
 }
