@@ -1,5 +1,6 @@
 package com.componetes.appandroid.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.componetes.appandroidsga.R
+import com.componetes.appandroidsga.ui.informes.InfoAlumno
 
 class Autenticacion : AppCompatActivity() {
     private lateinit var viewModel: AutenticacionVM
@@ -34,7 +36,10 @@ class Autenticacion : AppCompatActivity() {
         viewModel.resultado.observe(this) { resultado ->
             resultado.onSuccess {
                 Toast.makeText(this, "Login correcto", Toast.LENGTH_SHORT).show()
-                // Navegar a siguiente pantalla
+                val intent = Intent(this, InfoAlumno::class.java)
+                intent.putExtra("EMAIL_ALUMNO", email.text.toString())
+                startActivity(intent)
+                finish()
             }
             resultado.onFailure {
                 Toast.makeText(this, it.message ?: "Error", Toast.LENGTH_LONG).show()

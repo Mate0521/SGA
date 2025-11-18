@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type");
 
-require_once('../modelo/profesor.php'); // <-- tu modelo
+require_once('../Modelos/profesor.php'); // <-- tu modelo
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
