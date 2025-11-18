@@ -19,20 +19,26 @@ class Alumno extends Persona
                 parent::__construct($nombre, $id, $correo, $clave, $foto);
         }
 
-        public function obtenerCursosYHorarios($idAlumno)
+        public function obtenerCursosYHorarios()
         {
                 // Aquí iría la lógica para obtener los cursos y horarios del alumno
                 // incluyendo el nombre del profesor y de la asignatura.
                 $conexion = new Conexion();
                 $conexion->abrir();
                 $alumnoDAO = new AlumnoDAO();
-                $resultado = $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
+                $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
+                $lista = [];
                 while(($datos = $conexion->registro()) != null)
                 {
-                        
+                        $lista[] = [
+                                "nombre_alumno" => $datos[0],
+                                "correo" => $datos[1],
+                                "nombre_asignatura" => $datos[2],
+                                "nombre_profesor" => $datos[3]
+                        ];
                 }
                 $conexion->cerrar();
-                return $resultado;
+                return $lista;
 
         }
 
