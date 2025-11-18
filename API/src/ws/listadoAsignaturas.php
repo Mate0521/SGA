@@ -9,7 +9,7 @@ require_once('../Modelos/Asignatura.php'); // <-- tu modelo
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $asignatura = new Asignatura();
-    $listaAsignaturas = $asignatura->listaAsignaturas();
+    $listaAsignaturas = $asignatura->listarAsignaturas();
 
     $respuesta = [];
 

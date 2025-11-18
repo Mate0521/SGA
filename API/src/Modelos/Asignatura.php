@@ -163,8 +163,30 @@ class Asignatura
                 return $this;
         }
 
-        public function listaAsignaturas()
-        {
+        public function listarAsignaturas(){
+        $conexion = new Conexion();
+        $asignaturaDAO = new AsignaturaDAO();
 
+        $conexion->abrir();
+        $conexion->ejecutar($asignaturaDAO->listarAsignaturas());
+
+        $lista = [];
+
+        while (($fila = $conexion->registro()) != null) {
+
+            // convertir semanas → meses (aprox.)
+            $meses = round($fila[2] / 4, 1);
+
+            $lista[] = [
+                "nombre"            => $fila[0],
+                "nombre_car"        => $fila[1],
+                "duracion"          => $fila[2],
+                "duracion_meses"    => $meses,
+                "creditos_teoricos" => $fila[3],
+                "creditos_lab"      => $fila[4]
+            ];
         }
+
+        return $lista;
+    }
 }
