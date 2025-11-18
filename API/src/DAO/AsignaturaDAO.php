@@ -136,5 +136,13 @@
 
                 return $this;
         }
-    }
+
+        public function listarAsignaturas()
+        {
+                return "select a.Nombre_Asignatura, c.Nombre_Carrera, a.duracion, a.Creditos_Teoria, a.Creditos_Laboratorio 
+                        from
+                        asignatura a
+                        INNER JOIN carrera c ON a.Id_Carrera = c.Id_Carrera;";
+        }    
+}
 ?>
