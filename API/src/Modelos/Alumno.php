@@ -1,10 +1,40 @@
 <?php
+
+require_once('Persona.php');
+require_once('../DAO/AlumnoDAO.php');
+require_once('../DAO/Conexion.php');
+
 class Alumno extends Persona
 {
-        public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "", $legajo = "", $curso = "")
+        /*
+        3. archivo donde le envio el id del estudiante y me responde con:
+
+        nombre del alumno
+        correo
+        cursos en los que esta con su respesctivo horario, indicando tambien el profesor,
+        con el respevtivo nombre de la asignatura
+        */
+        public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "")
         {
                 parent::__construct($nombre, $id, $correo, $clave, $foto);
+        }
+
+        public function obtenerCursosYHorarios($idAlumno)
+        {
+                // Aquí iría la lógica para obtener los cursos y horarios del alumno
+                // incluyendo el nombre del profesor y de la asignatura.
+                $conexion = new Conexion();
+                $conexion->abrir();
+                $alumnoDAO = new AlumnoDAO();
+                $resultado = $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
+                while(($datos = $conexion->registro()) != null)
+                {
+                        
+                }
+                $conexion->cerrar();
+                return $resultado;
 
         }
+
 }
 ?>
