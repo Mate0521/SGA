@@ -13,7 +13,7 @@
         */
 
     require_once '../Conexion/Conexion.php';
-    require_once '../Conexion/ProfesorDAO.php';
+    require_once '../DAO/ProfesorDAO.php';
     class Profesor extends Persona {
 
         private $id_AreaCon;

@@ -136,5 +136,10 @@
 
                 return $this;
         }
-    }
+
+        public function listaAsignaturas()
+        {
+                return "";
+        }    
+}
 ?>

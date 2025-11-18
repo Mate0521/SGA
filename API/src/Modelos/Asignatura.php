@@ -1,6 +1,23 @@
 <?php
+
+require_once '../Conexion/Conexion.php';
+require_once '../DAO/AsignaturaDAO.php';
+
 class Asignatura
 {
+
+        /*
+        2. una archivo exclusivo para la consulta de asignaturas (lo mismo no le voy ha enviar nada ).
+
+        datos que me debe de dar (con el mismo nombre ):
+        nombre: nombre de la asigantura.
+        nombre_car:nombre de la carrera a la que pertenece 
+        duracion: cantidad de semanas que dura, si es posible pasemelo a cantidad de meses que dura
+        creditos_teoricos: de la asignatura 
+        creditos_lab: de la asignatura
+        curso:{}->listado del id de los cursos que dan esta asignatura
+        */
+
         private $id_Asignatura;
         private $nombre;
         private $id_Carrera;
@@ -144,5 +161,10 @@ class Asignatura
                 $this->cre_Teoria = $cre_Teoria;
 
                 return $this;
+        }
+
+        public function listaAsignaturas()
+        {
+
         }
 }
