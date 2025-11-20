@@ -20,27 +20,46 @@ class Alumno extends Persona
         }
 
         public function obtenerCursosYHorarios()
-        {
-                // Aquí iría la lógica para obtener los cursos y horarios del alumno
-                // incluyendo el nombre del profesor y de la asignatura.
-                $conexion = new Conexion();
-                $conexion->abrir();
-                $alumnoDAO = new AlumnoDAO();
-                $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
-                $lista = [];
-                while(($datos = $conexion->registro()) != null)
-                {
-                        $lista[] = [
-                                "nombre_alumno" => $datos[0],
-                                "correo" => $datos[1],
-                                "nombre_asignatura" => $datos[2],
-                                "nombre_profesor" => $datos[3]
-                        ];
-                }
-                $conexion->cerrar();
-                return $lista;
+{
+    $conexion = new Conexion();
+    $conexion->abrir();
 
-        }
+    $alumnoDAO = new AlumnoDAO();
+    $conexion->ejecutar($alumnoDAO->obtenerCursosYHorarios($this->getCorreo()));
+
+    $lista = [];
+
+    while (($datos = $conexion->registro()) != null) {
+
+        $lista[] = [
+            "id_curso"          => $datos[2],
+            "asignatura"        => $datos[3],
+            "profesor"          => $datos[4],
+            "horario" => [
+                "lunes"     => $datos[5],
+                "martes"    => $datos[6],
+                "miercoles" => $datos[7],
+                "jueves"    => $datos[8],
+                "viernes"   => $datos[9],
+                "sabados"   => $datos[10],
+                "domingo"   => $datos[11]
+            ]
+        ];
+
+        // guardamos nombre y correo una sola vez
+        $nombreAlumno = $datos[0];
+        $correoAlumno = $datos[1];
+    }
+
+    $conexion->cerrar();
+
+    return [
+        "nombre" => $nombreAlumno,
+        "correo" => $correoAlumno,
+        "cursos" => $lista
+    ];
+}
+
 
 }
 ?>
