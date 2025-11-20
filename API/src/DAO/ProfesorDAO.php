@@ -1,4 +1,5 @@
 <?php
+require_once('PersonaDAO.php');
 class ProfesorDAO extends PersonaDAO
 {
 
@@ -63,21 +64,24 @@ class ProfesorDAO extends PersonaDAO
     public function listarProfesores() {
 
         return "SELECT 
-                p.Nombre_Profesor AS nombre,
-                p.Correo AS correo,
-                p.Tel AS telefono,
-                a.Nombre_Area AS area,
-                d.Nombre_Departamento AS departamento,
-                (
-                    SELECT JSON_ARRAYAGG(asig.Nombre_Asignatura)
-                    FROM curso_profesor cp
-                    INNER JOIN curso c ON cp.id_curso = c.id_curso
-                    INNER JOIN asignatura asig ON c.id_asignatura = asig.Id_Asignatura
-                    WHERE cp.Id_Profesor = p.Id_Profesor
-                ) AS cursos
-            FROM profesor p
-            INNER JOIN area_con a ON p.Id_AreaCon = a.Id_Area
-            INNER JOIN departamento d ON a.Id_Departamento = d.Id_Departamento;";
+    p.Id_Profesor,
+    p.Nombre_Profesor AS nombre,
+    p.Correo AS correo,
+    p.Tel AS telefono,
+    a.Nombre_Area AS area,
+    d.Nombre_Departamento AS departamento,
+    GROUP_CONCAT(DISTINCT asig.Nombre_Asignatura SEPARATOR '|||') AS cursos_concat
+FROM profesor p
+INNER JOIN area_con a ON p.Id_AreaCon = a.Id_Area
+INNER JOIN departamento d ON a.Id_Departamento = d.Id_Departamento
+LEFT JOIN curso_profesor cp ON p.Id_Profesor = cp.Id_Profesor
+LEFT JOIN curso c ON cp.id_curso = c.id_curso
+LEFT JOIN asignatura asig ON c.id_asignatura = asig.Id_Asignatura
+GROUP BY 
+    p.Id_Profesor, p.Nombre_Profesor, p.Correo, p.Tel, 
+    a.Nombre_Area, d.Nombre_Departamento;
+
+";
 
     }
 }
