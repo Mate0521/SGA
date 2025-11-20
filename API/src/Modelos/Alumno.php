@@ -2,7 +2,7 @@
 
 require_once('Persona.php');
 require_once('../DAO/AlumnoDAO.php');
-require_once('../DAO/Conexion.php');
+require_once('../Conexion/Conexion.php');
 
 class Alumno extends Persona
 {
