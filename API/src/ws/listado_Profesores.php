@@ -11,7 +11,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 require_once('../Modelos/Profesor.php');
 require_once('../Conexion/Conexion.php');
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $profesor = new Profesor();
     $listaProfesores = $profesor->listarProfesores();

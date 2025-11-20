@@ -10,6 +10,7 @@ import com.componetes.appandroid.ui.Autenticacion
 import com.componetes.appandroid.ui.asignaturas.Asignaturas
 import com.componetes.appandroid.ui.profesores.Profesores
 import com.componetes.appandroidsga.databinding.ActivityMainBinding
+import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         // Listener para el botón "Login"
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, Autenticacion::class.java)
+            FirebaseApp.initializeApp(this)
             startActivity(intent)
         }
     }

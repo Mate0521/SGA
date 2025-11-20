@@ -11,12 +11,12 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @POST("listadoProfesores.php")
+    @POST("listado_Profesores.php")
     suspend fun getProfesores(): Response<List<Profesor>>
 
-    @POST("listadoAsignaturas.php")
+    @POST("listado_Asignaturas.php")
     suspend fun getAsignaturas(): List<Asignatura>
 
-    @POST("info.php")
+    @POST("cursos_horarios.php")
     suspend fun obtenerInfoAlumno(@Body request: CorreoRequest): Response<AlumnoResponse>
 }

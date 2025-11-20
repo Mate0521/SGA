@@ -22,7 +22,7 @@ class InfoAlumno : AppCompatActivity() {
         binding = ActivityInfoAlumnoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val correo = intent.getStringExtra("correo") ?: return
+        val correo = intent.getStringExtra("EMAIL_ALUMNO") ?: return
 
         adapter = CursosAlumnoAdapter()
         binding.recyclerCursosAlumno.adapter = adapter

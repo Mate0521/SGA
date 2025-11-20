@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <!-- Cambia el 'parent' aquí -->
-    <style name="Base.Theme.AppAndroidSGA" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Desactivar forzado de modo oscuro -->
+    <style name="Base.Theme.AppAndroidSGA" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Desactivar forzado de modo oscuro -->
         <item name="android:forceDarkAllowed">false</item>
 
         <!-- Colores fijos -->
@@ -15,5 +15,6 @@
 
     <!-- Tu tema principal que hereda del base ya corregido -->
     <style name="Theme.AppAndroidSGA" parent="Base.Theme.AppAndroidSGA" />
+
 
 </resources>
