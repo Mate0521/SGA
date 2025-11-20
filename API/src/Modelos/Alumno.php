@@ -6,7 +6,7 @@ require_once('../Conexion/Conexion.php');
 
 class Alumno extends Persona
 {
-        /*
+    /*
         3. archivo donde le envio el id del estudiante y me responde con:
 
         nombre del alumno
@@ -14,61 +14,59 @@ class Alumno extends Persona
         cursos en los que esta con su respesctivo horario, indicando tambien el profesor,
         con el respevtivo nombre de la asignatura
         */
-        public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "")
-        {
-                parent::__construct($nombre, $id, $correo, $clave, $foto);
+    public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "")
+    {
+        parent::__construct($nombre, $id, $correo, $clave, $foto);
+    }
+
+    public function obtenerCursosYHorarios()
+    {
+        $conexion = new Conexion();
+        $conexion->abrir();
+
+        $alumnoDAO = new AlumnoDAO();
+        $consulta = $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
+        $conexion->ejecutar($consulta);
+
+        $listaCursos = [];
+        $nombreAlumno = null;
+        $correoAlumno = null;
+
+        while ($datos = $conexion->registro()) {
+
+            // Tomar nombre y correo solo una vez
+            if ($nombreAlumno === null) {
+                $nombreAlumno = $datos[0];
+                $correoAlumno = $datos[1];
+            }
+
+            $listaCursos[] = [
+                "id_curso"   => $datos[2],
+                "asignatura" => $datos[3],
+                "profesor"   => $datos[4],
+                "horario" => [
+                    "lunes"     => $datos[5],
+                    "martes"    => $datos[6],
+                    "miercoles" => $datos[7],
+                    "jueves"    => $datos[8],
+                    "viernes"   => $datos[9],
+                    "sabado"    => $datos[10],
+                    "domingo"   => $datos[11]
+                ]
+            ];
         }
 
-        public function obtenerCursosYHorarios()
-{
-    $conexion = new Conexion();
-    $conexion->abrir();
+        $conexion->cerrar();
 
-    $alumnoDAO = new AlumnoDAO();
-    $consulta = $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
-    $conexion->ejecutar($consulta);
-
-    $listaCursos = [];
-    $nombreAlumno = null;
-    $correoAlumno = null;
-
-    // Procesar filas
-    while ($datos = $conexion->registro()) {
-
-        // Solo tomar nombre y correo una vez
+        // Si no existe alumno
         if ($nombreAlumno === null) {
-            $nombreAlumno = $datos["nombre_alumno"];
-            $correoAlumno = $datos["correo"];
+            return false;
         }
 
-        $listaCursos[] = [
-            "id_curso"   => $datos["id_curso"],
-            "asignatura" => $datos["asignatura"],
-            "profesor"   => $datos["profesor"],
-            "horario" => [
-                "lunes"     => $datos["lunes"],
-                "martes"    => $datos["martes"],
-                "miercoles" => $datos["miercoles"],
-                "jueves"    => $datos["jueves"],
-                "viernes"   => $datos["viernes"],
-                "sabado"    => $datos["sabado"],
-                "domingo"   => $datos["domingo"]
-            ]
+        return [
+            "nombre" => $nombreAlumno,
+            "correo" => $correoAlumno,
+            "cursos" => $listaCursos
         ];
     }
-
-    $conexion->cerrar();
-
-    // Si no hay datos, retornar false
-    if ($nombreAlumno === null) {
-        return false;
-    }
-
-    return [
-        "nombre" => $nombreAlumno,
-        "correo" => $correoAlumno,
-        "cursos" => $listaCursos
-    ];
 }
-}
-?>
