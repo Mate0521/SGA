@@ -1,4 +1,5 @@
 <?php
+require_once('PersonaDAO.php');
 class AlumnoDAO extends PersonaDAO
 {
         public function __construct($nombre = "", $id = "", $correo = "", $clave = "", $foto = "")

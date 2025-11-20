@@ -25,41 +25,50 @@ class Alumno extends Persona
     $conexion->abrir();
 
     $alumnoDAO = new AlumnoDAO();
-    $conexion->ejecutar($alumnoDAO->obtenerCursosYHorarios($this->getCorreo()));
+    $consulta = $alumnoDAO->obtenerCursosYHorarios($this->getCorreo());
+    $conexion->ejecutar($consulta);
 
-    $lista = [];
+    $listaCursos = [];
+    $nombreAlumno = null;
+    $correoAlumno = null;
 
-    while (($datos = $conexion->registro()) != null) {
+    // Procesar filas
+    while ($datos = $conexion->registro()) {
 
-        $lista[] = [
-            "id_curso"          => $datos[2],
-            "asignatura"        => $datos[3],
-            "profesor"          => $datos[4],
+        // Solo tomar nombre y correo una vez
+        if ($nombreAlumno === null) {
+            $nombreAlumno = $datos["nombre_alumno"];
+            $correoAlumno = $datos["correo"];
+        }
+
+        $listaCursos[] = [
+            "id_curso"   => $datos["id_curso"],
+            "asignatura" => $datos["asignatura"],
+            "profesor"   => $datos["profesor"],
             "horario" => [
-                "lunes"     => $datos[5],
-                "martes"    => $datos[6],
-                "miercoles" => $datos[7],
-                "jueves"    => $datos[8],
-                "viernes"   => $datos[9],
-                "sabados"   => $datos[10],
-                "domingo"   => $datos[11]
+                "lunes"     => $datos["lunes"],
+                "martes"    => $datos["martes"],
+                "miercoles" => $datos["miercoles"],
+                "jueves"    => $datos["jueves"],
+                "viernes"   => $datos["viernes"],
+                "sabado"    => $datos["sabado"],
+                "domingo"   => $datos["domingo"]
             ]
         ];
-
-        // guardamos nombre y correo una sola vez
-        $nombreAlumno = $datos[0];
-        $correoAlumno = $datos[1];
     }
 
     $conexion->cerrar();
 
+    // Si no hay datos, retornar false
+    if ($nombreAlumno === null) {
+        return false;
+    }
+
     return [
         "nombre" => $nombreAlumno,
         "correo" => $correoAlumno,
-        "cursos" => $lista
+        "cursos" => $listaCursos
     ];
 }
-
-
 }
 ?>
