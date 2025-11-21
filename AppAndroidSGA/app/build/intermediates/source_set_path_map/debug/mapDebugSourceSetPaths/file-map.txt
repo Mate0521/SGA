@@ -1,0 +1,56 @@
+com.componetes.appandroidsga.app-lifecycle-runtime-2.7.0-0 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\0beaadf2a1f154005426bc19104c696b\transformed\lifecycle-runtime-2.7.0\res
+com.componetes.appandroidsga.app-datastore-core-release-1 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\13a0163d3fbd9399b265ca10810ca004\transformed\datastore-core-release\res
+com.componetes.appandroidsga.app-cardview-1.0.0-2 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\16bf836d4655618544096496e558b714\transformed\cardview-1.0.0\res
+com.componetes.appandroidsga.app-credentials-1.2.0-rc01-3 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\1a43abb0f3f376c8aebf750c64e88626\transformed\credentials-1.2.0-rc01\res
+com.componetes.appandroidsga.app-drawerlayout-1.1.1-4 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\1f91075ccd77fa42f3c092fe667b75de\transformed\drawerlayout-1.1.1\res
+com.componetes.appandroidsga.app-viewpager2-1.0.0-5 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\267734e3e0c15c6b173dbd000cd40891\transformed\viewpager2-1.0.0\res
+com.componetes.appandroidsga.app-emoji2-1.3.0-6 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\2a117636f3ac2bb336d85f5b54c157f2\transformed\emoji2-1.3.0\res
+com.componetes.appandroidsga.app-play-services-basement-18.5.0-7 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\2a43c299d0c096a05e5c8d0768baf066\transformed\play-services-basement-18.5.0\res
+com.componetes.appandroidsga.app-play-services-base-18.5.0-8 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\2ba39faad6c5a7a544b1dc04d7b9d634\transformed\play-services-base-18.5.0\res
+com.componetes.appandroidsga.app-credentials-play-services-auth-1.2.0-rc01-9 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\370b4b670228edd49621584645f6e2c4\transformed\credentials-play-services-auth-1.2.0-rc01\res
+com.componetes.appandroidsga.app-lifecycle-viewmodel-savedstate-2.7.0-10 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\4286b11d423f710144aa0b2d5d0a5f9c\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.componetes.appandroidsga.app-datastore-preferences-core-release-11 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\50ca9ddac424d76cd35a3abd0b6d022f\transformed\datastore-preferences-core-release\res
+com.componetes.appandroidsga.app-lifecycle-livedata-ktx-2.7.0-12 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\5174f53fcbcc1930fabb6296ac65b663\transformed\lifecycle-livedata-ktx-2.7.0\res
+com.componetes.appandroidsga.app-core-runtime-2.2.0-13 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\51b029a7d8ea504dd6e33e70fc06686c\transformed\core-runtime-2.2.0\res
+com.componetes.appandroidsga.app-datastore-release-14 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\528abc418dedf4247b01d4e7b14429d5\transformed\datastore-release\res
+com.componetes.appandroidsga.app-startup-runtime-1.1.1-15 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\65422838085781241aae410304749595\transformed\startup-runtime-1.1.1\res
+com.componetes.appandroidsga.app-graphics-shapes-release-16 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\6c7486ba1b02505df4957dd5973be816\transformed\graphics-shapes-release\res
+com.componetes.appandroidsga.app-datastore-preferences-release-17 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\73e1313effb002007f4ed36bff26d52f\transformed\datastore-preferences-release\res
+com.componetes.appandroidsga.app-savedstate-1.2.1-18 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\74969ef792918e84fdb5ba5539841823\transformed\savedstate-1.2.1\res
+com.componetes.appandroidsga.app-activity-1.11.0-19 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\79b0b8087620936530899a002962c0de\transformed\activity-1.11.0\res
+com.componetes.appandroidsga.app-browser-1.4.0-20 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\7a2265f8bfba2b19786249d4e9dd3cd2\transformed\browser-1.4.0\res
+com.componetes.appandroidsga.app-transition-1.5.0-21 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\8f80460bf534a926d40e2bf85d0ec3c9\transformed\transition-1.5.0\res
+com.componetes.appandroidsga.app-appcompat-resources-1.7.1-22 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\932299a9c0cbfcc2193886a6e901a64b\transformed\appcompat-resources-1.7.1\res
+com.componetes.appandroidsga.app-appcompat-1.7.1-23 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\98f72632b5f7c9436e20bd6049038e9c\transformed\appcompat-1.7.1\res
+com.componetes.appandroidsga.app-core-common-2.0.3-24 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\a006c202f0c06c400a5a63e30992e32d\transformed\core-common-2.0.3\res
+com.componetes.appandroidsga.app-core-1.17.0-25 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\a0920fe0fb5a91ccd81a8dbd2857f178\transformed\core-1.17.0\res
+com.componetes.appandroidsga.app-emoji2-views-helper-1.3.0-26 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\a9987965f99b30deedef51616b988ccb\transformed\emoji2-views-helper-1.3.0\res
+com.componetes.appandroidsga.app-constraintlayout-2.2.1-27 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\b151f17cd43e9c844549ed4e7d1cbdf5\transformed\constraintlayout-2.2.1\res
+com.componetes.appandroidsga.app-lifecycle-livedata-core-2.7.0-28 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\b1f0ee79ec7e3118828c693ed187ad76\transformed\lifecycle-livedata-core-2.7.0\res
+com.componetes.appandroidsga.app-firebase-common-22.0.1-29 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\b451c0c4b20621e6319ca4204762393b\transformed\firebase-common-22.0.1\res
+com.componetes.appandroidsga.app-ads-adservices-java-1.1.0-beta11-30 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\b6d64d68516c1592206a411764edd4e6\transformed\ads-adservices-java-1.1.0-beta11\res
+com.componetes.appandroidsga.app-lifecycle-livedata-core-ktx-2.7.0-31 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\b8e640b04c53bea0ec910204ba147fbd\transformed\lifecycle-livedata-core-ktx-2.7.0\res
+com.componetes.appandroidsga.app-coordinatorlayout-1.1.0-32 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\ba84696640134acf5123cd65d73aaac5\transformed\coordinatorlayout-1.1.0\res
+com.componetes.appandroidsga.app-ads-adservices-1.1.0-beta11-33 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\bc25ee472e25824b182832dc898f6c99\transformed\ads-adservices-1.1.0-beta11\res
+com.componetes.appandroidsga.app-lifecycle-livedata-2.7.0-34 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\bee43b0ef9ea65b5b9f685e168827b9b\transformed\lifecycle-livedata-2.7.0\res
+com.componetes.appandroidsga.app-lifecycle-viewmodel-2.7.0-35 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\bf3388050a0088bd81b01c92a0caf6eb\transformed\lifecycle-viewmodel-2.7.0\res
+com.componetes.appandroidsga.app-core-ktx-1.17.0-36 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\c0e8a9d2867087dff170b9c49466d44c\transformed\core-ktx-1.17.0\res
+com.componetes.appandroidsga.app-tracing-1.2.0-37 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\c1cec9831613e68d9b1bdd69c70f1d59\transformed\tracing-1.2.0\res
+com.componetes.appandroidsga.app-lifecycle-viewmodel-ktx-2.7.0-38 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\caa9f2dd90ac7d50fccd052a5019700e\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.componetes.appandroidsga.app-fragment-1.5.4-39 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\d4d16c69bb26d603f9fb0ddd98a9cb2c\transformed\fragment-1.5.4\res
+com.componetes.appandroidsga.app-material-1.13.0-40 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\d50392734f1fa7a92360f2845cb6665b\transformed\material-1.13.0\res
+com.componetes.appandroidsga.app-recyclerview-1.2.1-41 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\de753968e57f22ae46871e71e075050f\transformed\recyclerview-1.2.1\res
+com.componetes.appandroidsga.app-annotation-experimental-1.4.1-42 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\e5e752669a5f9d4396433c6bf42002c8\transformed\annotation-experimental-1.4.1\res
+com.componetes.appandroidsga.app-dynamicanimation-1.1.0-43 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\e785f8787eb8459a23facf147e73019a\transformed\dynamicanimation-1.1.0\res
+com.componetes.appandroidsga.app-play-services-auth-20.7.0-44 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\ef46fffb16eb4ad36376c782f5a034b6\transformed\play-services-auth-20.7.0\res
+com.componetes.appandroidsga.app-profileinstaller-1.4.0-45 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\f17c3a38abc15409d9aa51b4e80ecc62\transformed\profileinstaller-1.4.0\res
+com.componetes.appandroidsga.app-lifecycle-process-2.7.0-46 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\f80fe6b883655369fa938fb442cfb04d\transformed\lifecycle-process-2.7.0\res
+com.componetes.appandroidsga.app-core-viewtree-1.0.0-47 C:\Users\MATEO CARVAJAL\.gradle\caches\8.11.1\transforms\f8f9ee94577cb42c066ca2d22c469e20\transformed\core-viewtree-1.0.0\res
+com.componetes.appandroidsga.app-pngs-48 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\build\generated\res\pngs\debug
+com.componetes.appandroidsga.app-res-49 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\build\generated\res\processDebugGoogleServices
+com.componetes.appandroidsga.app-resValues-50 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\build\generated\res\resValues\debug
+com.componetes.appandroidsga.app-packageDebugResources-51 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.componetes.appandroidsga.app-packageDebugResources-52 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.componetes.appandroidsga.app-debug-53 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.componetes.appandroidsga.app-debug-54 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\src\debug\res
+com.componetes.appandroidsga.app-main-55 C:\Users\MATEO CARVAJAL\Documents\Trabajos U\Proy_Repos\SGA\AppAndroidSGA\app\src\main\res

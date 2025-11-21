@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_asignaturas.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_asignaturas.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_asignatura_detalle.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_asignatura_detalle.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/item_curso_alumno.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/item_curso_alumno.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/item_asignatura.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/item_asignatura.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_autenticacion.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_autenticacion.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_info_alumno.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_info_alumno.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_profesor_detalle.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_profesor_detalle.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_main.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/activity_profesores.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_profesores.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-mergeDebugResources-52:/layout/item_profesor.xml",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/item_profesor.xml"
+    }
+]

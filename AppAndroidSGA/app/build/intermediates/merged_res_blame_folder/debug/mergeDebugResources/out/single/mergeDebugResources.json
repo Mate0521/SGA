@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_asignaturas.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_asignaturas.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/xml_backup_rules.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_info_alumno.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_info_alumno.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_profesor_detalle.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_profesor_detalle.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/xml_data_extraction_rules.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_item_curso_alumno.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/item_curso_alumno.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_asignatura_detalle.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_asignatura_detalle.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_main.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_item_profesor.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/item_profesor.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_profesores.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_profesores.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_activity_autenticacion.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/activity_autenticacion.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/layout_item_asignatura.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/layout/item_asignatura.xml"
+    },
+    {
+        "merged": "com.componetes.appandroidsga.app-debug-53:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.componetes.appandroidsga.app-main-55:/drawable/ic_launcher_foreground.xml"
+    }
+]
