@@ -14,6 +14,7 @@
 
 require_once '../Conexion/Conexion.php';
 require_once '../DAO/ProfesorDAO.php';
+require_once 'Persona.php';
 class Profesor extends Persona
 {
 
@@ -79,22 +80,31 @@ class Profesor extends Persona
     {
         $conexion = new Conexion();
         $profesorDAO = new ProfesorDAO();
+
         $conexion->abrir();
         $conexion->ejecutar($profesorDAO->listarProfesores());
 
         $lista = [];
 
         while (($fila = $conexion->registro()) != null) {
+            // $fila[6] contiene cursos concatenados con '|||'
+            $cursos = [];
+            if (!empty($fila[6])) {
+                $cursos = array_map('trim', explode('|||', $fila[6]));
+            }
+
             $lista[] = [
-                "nombre"       => $fila[0],
-                "correo"       => $fila[1],
-                "telefono"     => $fila[2],
-                "area"         => $fila[3],
-                "departamento" => $fila[4],
-                "cursos"       => json_decode($fila[5])  // array de cursos
+                "id"           => $fila[0],
+                "nombre"       => $fila[1],
+                "correo"       => $fila[2],
+                "telefono"     => $fila[3],
+                "area"         => $fila[4],
+                "departamento" => $fila[5],
+                "cursos"       => $cursos
             ];
         }
 
-        return $lista;   // <-- IMPORTANTE: devolver array, NO JSON
+        $conexion->cerrar();
+        return $lista;
     }
 }

@@ -139,10 +139,25 @@
 
         public function listarAsignaturas()
         {
-                return "select a.Nombre_Asignatura, c.Nombre_Carrera, a.duracion, a.Creditos_Teoria, a.Creditos_Laboratorio 
-                        from
-                        asignatura a
-                        INNER JOIN carrera c ON a.Id_Carrera = c.Id_Carrera;";
+                return "
+                SELECT 
+    asig.Nombre_Asignatura AS nombre_asignatura,
+    car.Nombre_Carrera AS nombre_carrera,
+    asig.duracion,
+    asig.Creditos_Teoria,
+    asig.Creditos_Laboratorio,
+    GROUP_CONCAT(DISTINCT c.id_curso SEPARATOR '|||') AS cursos
+FROM asignatura as asig
+INNER JOIN carrera car ON asig.Id_Carrera = car.Id_Carrera
+LEFT JOIN curso c ON c.id_asignatura = asig.Id_Asignatura
+GROUP BY 
+    asig.Id_Asignatura,
+    asig.Nombre_Asignatura,
+    car.Nombre_Carrera,
+    asig.duracion,
+    asig.Creditos_Teoria,
+    asig.Creditos_Laboratorio;
+";
         }    
 }
 ?>
