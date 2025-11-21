@@ -7,7 +7,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 
 require_once('../Modelos/Asignatura.php');
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $asignatura = new Asignatura();
     $listaAsignaturas = $asignatura->listarAsignaturas();
